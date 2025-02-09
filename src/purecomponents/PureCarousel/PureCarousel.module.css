@@ -1,0 +1,20 @@
+.main_container {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr;
+    gap: 0.7rem;
+    margin:10px
+  }
+  
+  .carouselWrapper {
+    /* display: grid; */
+    width: auto;
+    height: 40vh;
+  }
+  
+  .dot_container {
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
