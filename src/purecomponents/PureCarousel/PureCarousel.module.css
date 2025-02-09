@@ -6,9 +6,13 @@
   }
   
   .carouselWrapper {
-    /* display: grid; */
+    display: grid;
     width: auto;
     height: 40vh;
+    grid-template-rows: 0.15fr 1fr 0.1fr;
+    grid-template-columns:0.1fr 1fr 0.1fr;
+    background-color: red;
+
   }
   
   .dot_container {
