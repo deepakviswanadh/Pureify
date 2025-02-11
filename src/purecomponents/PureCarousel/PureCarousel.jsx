@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from "./PureCarousel.module.css";
 import CarouselComponent from "./CarouselComponent";
 import CarouselHandler from "./CarouselComponent/CarouselHandlers";
@@ -17,22 +17,36 @@ const PureCarousel = () => {
     { id: 3, src: "", alt: "", zi: 1, content: "slide3", color: "lightGrey" },
   ]);
 
+  const [autoScroll, setAutoScroll] = useState(false);
+
+  const intervalRef = useRef(null);
+
   const triggerChange = (flag) => {
-    const result = [
-      ...data.map(({ ...each }) => {
+    return setData((prev) => {
+      [...prev].map(({ ...each }) => {
         let zi = each.zi;
         zi = flag ? ++zi : --zi;
-        if (zi > data.length / 2) {
-          zi = Math.ceil(-data.length / 2);
-        } else if (zi < -data.length / 2) {
-          zi = Math.floor(data.length / 2);
+        if (zi > prev.length / 2) {
+          zi = Math.ceil(-prev.length / 2);
+        } else if (zi < -prev.length / 2) {
+          zi = Math.floor(prev.length / 2);
         }
         each.zi = zi;
         return each;
-      }),
-    ];
-    setData(() => [...result]);
+      });
+    });
   };
+
+  useEffect(() => {
+    if (autoScroll) {
+      intervalRef.current = setInterval(() => {
+        triggerChange();
+      }, 300);
+    } else {
+      clearInterval(intervalRef.current);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [autoScroll]);
 
   return (
     <div className={classes.main_container}>
@@ -51,7 +65,9 @@ const PureCarousel = () => {
       </div>
 
       <div className={`${classes.dot_container} ${classes.center}`}>
-        <h3>dots here please</h3>
+        <button onClick={() => setAutoScroll((prev) => !prev)}>
+          {autoScroll ? "Stop Auto Scroll" : "Start Auto Scroll"}
+        </button>
       </div>
     </div>
   );
