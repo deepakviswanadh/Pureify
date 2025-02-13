@@ -23,7 +23,7 @@ const PureCarousel = () => {
 
   const triggerChange = (flag) => {
     return setData((prev) => {
-      [...prev].map(({ ...each }) => {
+      return [...prev].map(({ ...each }) => {
         let zi = each.zi;
         zi = flag ? ++zi : --zi;
         if (zi > prev.length / 2) {
