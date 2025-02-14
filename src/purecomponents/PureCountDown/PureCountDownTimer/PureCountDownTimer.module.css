@@ -1,0 +1,23 @@
+.main_container {
+  border: 1px solid red;
+  height: 50vh;
+  gap: 3rem;
+}
+
+.inner_time {
+  height: 20vh;
+  width: 15vw;
+  border: 1px solid blue;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_elements {
+  font-size: 2rem;
+  width: 10rem;
+  text-align: center;
+}

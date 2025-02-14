@@ -40,7 +40,7 @@ const PureCarousel = () => {
   useEffect(() => {
     if (autoScroll) {
       intervalRef.current = setInterval(() => {
-        triggerChange();
+        triggerChange(true);
       }, 300);
     } else {
       clearInterval(intervalRef.current);

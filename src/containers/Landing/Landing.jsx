@@ -1,10 +1,10 @@
 import React from "react";
-import PureCarousel from "purecomponents/PureCarousel";
+import PureCountDown from "purecomponents/PureCountDown";
 
 const Landing = () => {
   return (
     <div>
-      <PureCarousel />
+      <PureCountDown />
     </div>
   );
 };
