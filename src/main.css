@@ -1,0 +1,16 @@
+:root,
+[data-theme="light"] {
+  --primary-color: red;
+  --secondary-color: black;
+  --green-color: green;
+  --primary-background-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --primary-color: orange;
+  --secondary-color: white;
+  --green-color: lightgreen;
+  --primary-background-color: black;
+  --text-color: white;
+}

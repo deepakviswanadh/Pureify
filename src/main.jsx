@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Landing from "containers/Landing";
 import store from "store/store";
+import "./main.css";
 
 const Main = () => {
   return (

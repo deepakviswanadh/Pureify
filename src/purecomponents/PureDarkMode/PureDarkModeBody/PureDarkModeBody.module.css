@@ -1,0 +1,7 @@
+.main_container {
+  height: calc(100vh - 6.2rem);
+  border: 1px solid var(--green-color);
+  margin: 10px;
+  background-color: var(--primary-background-color);
+  color: var(--text-color);
+}
