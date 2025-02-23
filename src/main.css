@@ -1,10 +1,19 @@
+/* unlike other css properties, which target a specific property
+this file doesnot apply any "actual" css properties, but it will 
+declare these variables in the top level of the tree (body)
+so that the rest of elements can reference to these values directly... */
+
 :root,
+/* attribute selector and :root will apply directly
+to the top element (body) */
 [data-theme="light"] {
   --primary-color: red;
   --secondary-color: black;
   --green-color: green;
   --primary-background-color: white;
   --text-color: black;
+  --modal-primary-background: rgba(128, 128, 128, 0.2);
+  --modal-container-primary: rgb(225, 225, 103);
 }
 
 [data-theme="dark"] {

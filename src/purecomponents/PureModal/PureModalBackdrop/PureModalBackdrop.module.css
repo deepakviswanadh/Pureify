@@ -1,0 +1,6 @@
+.modal_backdrop_container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--modal-primary-background);
+}

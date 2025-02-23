@@ -5,6 +5,7 @@ const PureDarkModeButton = () => {
 
   useEffect(() => {
     document.querySelector("body").setAttribute("data-theme", "light");
+    return () => document.querySelector("body").removeAttribute("data-theme");
   }, []);
 
   const handleToggle = (event) => {

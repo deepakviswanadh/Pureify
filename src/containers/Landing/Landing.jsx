@@ -1,11 +1,12 @@
 import React from "react";
 import PureCountDown from "purecomponents/PureCountDown";
 import PureDarkMode from "purecomponents/PureDarkMode";
+import PureModal from "purecomponents/PureModal";
 
 const Landing = () => {
   return (
     <div>
-      <PureDarkMode />
+      <PureModal />
     </div>
   );
 };
