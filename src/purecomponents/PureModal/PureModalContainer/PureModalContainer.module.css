@@ -15,7 +15,7 @@
 
 @media (max-width: 400px) {
   .modal_content_container {
-    background-color: var(--primary-color);
+    background-color: lightgreen;
     font-size: 0.5rem;
   }
 }

@@ -1,14 +1,18 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import classes from "./PureModalContainer.module.css";
+import AlertBox from "./types/AlertBox";
+import DecisionBox from "./types/DecisionBox";
 
-const PureModalContainer = () => {
+//the user should be given either types or they can pass their own
+//component here
+const PureModalContainer = ({ type, setOpen }) => {
   return (
     <div
       id="modal-content"
       onClick={() => {}}
       className={classes.modal_content_container}
     >
-      PureModalContainer
+      {type == "alert" ? <AlertBox /> : <DecisionBox setOpen={setOpen} />}
     </div>
   );
 };

@@ -1,0 +1,23 @@
+.decision_main_container {
+  display: grid;
+  grid-template-rows: 0.3fr 1fr;
+  height: inherit;
+  width: inherit;
+}
+
+.title_main_container {
+  grid-row: 1/1;
+  border: 1px solid red;
+}
+
+.button_main_container {
+  grid-row: 2/2;
+  border: 1px solid red;
+  background-color: cadetblue;
+}
+
+.center_containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
