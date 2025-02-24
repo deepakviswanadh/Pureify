@@ -13,7 +13,7 @@
 ############### Mid-Level Frontend Developer ###############
 📍 Design and implement a draggable and resizable component using HTML, CSS, and JavaScript.
 📍 Build a star rating widget that allows users to rate a product or service.
-📍 Develop a responsive and customizable modal component that can display various types of content.
+📍 Develop a responsive and customizable modal component that can display various types of content. --done
 📍 Create a dynamic form that dynamically adds or removes form fields based on user input.
 📍 Implement a pagination system for a list of items, allowing users to navigate through pages.
 📍 Build a file upload component with drag-and-drop functionality and progress indicators.
