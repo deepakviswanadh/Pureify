@@ -19,7 +19,7 @@ const initiateGame = () => {
       const position = event.target.id.split("_")[1];
       const move_result = makeMove(position);
       if (move_result) {
-        element.textContent = state[position];
+        element.innerText = state[position];
       }
       const result = checkWinner();
       if (result === 0) {

@@ -17,8 +17,14 @@ const PureRating = ({ count }) => {
     const starCenterX =
       starElement.getBoundingClientRect().left +
       starElement.getBoundingClientRect().width / 2;
-    const isLeftToRight = e.clientX >= starCenterX;
-    setRated({ ...rated, [starId]: isLeftToRight });
+    //when we are moving over a star, from left to right
+    //eventually the event will cross the center and
+    //which means we can go ahead and color the star
+
+    //similarly when the event is before the center of the star
+    //which means we will go ahead and uncolor the star
+    const colorTheStar = e.clientX >= starCenterX;
+    setRated({ ...rated, [starId]: colorTheStar });
   };
 
   const generateAStar = (each) => {
