@@ -19,9 +19,11 @@ const InnerBar = () => {
   }, []);
 
   const reduceWidth = () => {
-    setWidth((prev) => prev - 0.25);
+    setWidth((prev) => prev - 0.45);
   };
-  const validateWidth = useCallback(() => width == 0, [width]);
+  const validateWidth = useCallback(() => {
+    return Math.floor(width) == 0;
+  }, [width]);
 
   useEffect(() => {
     validateRef.current = validateWidth;
@@ -29,18 +31,21 @@ const InnerBar = () => {
   }, [validateWidth]);
 
   useEffect(() => {
+    let start_time = Date.now();
     ref.current = setInterval(() => {
       if (validateRef.current()) {
         cleanUp();
+        alert(`total execution time is ${(Date.now() - start_time) / 1000}s`);
         return;
       } else {
         reduceWidth();
       }
-    }, 5);
+    }, 1);
     return () => cleanUp();
   }, []);
 
   const cleanUp = () => {
+    console.log("called cleanup");
     clearInterval(ref.current);
     ref.current = null;
     validateRef.current = null;
